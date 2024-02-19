@@ -34,7 +34,7 @@ module.exports = {
 			const categories = {};
 			let msg = "";
 
-			msg += `╔══════════════╗\n     YAZKY CMD💐\n╚══════════════╝`;
+			msg += `╔══════════════╗\n     𝔎𝔜𝔏𝔈𝗬𝗔𝗡𝗭𝗨 𝗕𝗢𝗧𝔎𝔜𝔏𝔈\n╚══════════════╝`;
 
 			for (const [name, value] of commands) {
 					if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,22 +46,22 @@ module.exports = {
 8
 			Object.keys(categories).forEach(category => {
 					if (category !== "info") {
-							msg += `\n╭────────────⭓\n│『 ${category.toUpperCase()} 』`;
+							msg += `\n╭────────────◉\n│『 ${category.toUpperCase()} 』`;
 
 							const names = categories[category].commands.sort();
 							for (let i = 0; i < names.length; i += 1) {
-									const cmds = names.slice(i, i + 1).map(item => `│🎀${item}🎀`);
+									const cmds = names.slice(i, i + 1).map(item => `𓃵 |『${item}』`);
 									msg += `\n${cmds.join(" ".repeat(Math.max(0, 5 - cmds.join("").length)))}`;
 							}
 
-							msg += `\n╰────────⭓`;
+							msg += `\n╰───────◉`;
 					}
 			});
 
 			const totalCommands = commands.size;
 			msg += `\n𝗖𝘂𝗿𝗿𝗲𝗻𝘁𝗹𝘆, 𝘁𝗵𝗲 𝗯𝗼𝘁 𝗵𝗮𝘀 ${totalCommands} 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝘁𝗵𝗮𝘁 𝗰𝗮𝗻 𝗯𝗲 𝘂𝘀𝗲𝗱\n`;
 			msg += `𝗧𝘆𝗽𝗲 ${prefix} 𝗵𝗲𝗹𝗽 𝗰𝗺𝗱𝗡𝗮𝗺𝗲 𝘁𝗼 𝘃𝗶𝗲𝘄 𝘁𝗵𝗲 𝗱𝗲𝘁𝗮𝗶𝗹𝘀 𝗼𝗳 𝘁𝗵𝗮𝘁 𝗰𝗼𝗺𝗺𝗮𝗻𝗱\n`;
-			msg += `YAZKY AI CHATBOT 💐`;
+			msg += `⚜️𝐾𝑌𝐿𝐸 𝐶𝐻𝐴𝑇𝐵𝑂𝑇⚜️`;
 
 
 			const helpListImages = [

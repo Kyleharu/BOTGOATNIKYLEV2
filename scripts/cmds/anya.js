@@ -1,7 +1,7 @@
 const axios = require("axios")
 module.exports = {
 	config: {
-		name: 'anya',
+		name: 'yanzu',
 		version: '1.2',
 		author: 'Xemon',
 		countDown: 15,
@@ -30,8 +30,8 @@ module.exports = {
 			error: 'Simsimi đang bận, bạn hãy thử lại sau'
 		},
 		en: {
-			turnedOn: '✅ | Turned on Anya successfully!',
-			turnedOff: '✅ | Turned off Anya successfully!',
+			turnedOn: '✅ | Turned on Ｙａｎｚｕ successfully!',
+			turnedOff: '✅ | Turned off Ｙａｎｚｕ successfully!',
 			chatting: 'Already Chatting with hina...',
 			error: 'What?🙂'
 		}

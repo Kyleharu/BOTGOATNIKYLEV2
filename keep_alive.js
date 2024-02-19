@@ -15,7 +15,7 @@ app.get('/watch', async (req, res) => {
 			'Cookie': Object.keys(cookies).map(key => `${key}=${cookies[key]}`).join('; ')
 		};
 
-		const response = await axios.get('https://replit.com/@cliffvincentvto/GOATBOT~V2', { headers });
+		const response = await axios.get('https://replit.com/@kylesbot/GOATBOT-V2', { headers });
 		// Check the response
 		console.log(response.data);
 	} catch (error) {
@@ -36,7 +36,7 @@ app.get('/like', async (req, res) => {
 			'Cookie': Object.keys(cookies).map(key => `${key}=${cookies[key]}`).join('; ')
 		};
 
-		const response = await axios.post('https://replit.com/like/@cliffvincentvto/GOATBOT~V2', {}, { headers });
+		const response = await axios.post('https://replit.com/@kylesbot/GOATBOT-V2', {}, { headers });
 
 		console.log(response.data);
 	} catch (error) {

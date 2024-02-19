@@ -3,19 +3,19 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "⾕ | 𝙔𝘼𝙕𝙆𝙔 𝘼𝙄";
+const doNotDelete = "🇵🇭 | 𝙔𝘼𝙉𝙕𝙐 𝘼𝙄";
 /** 
 * @author NTKhang
 * @author: do not delete it
 * @message if you delete or edit it you will get a global ban
-* please don't ban me, your help.js is Modified 
+* 
 */
 
 module.exports = {
 				config: {
-								name: "help",
+								name: "help0",
 								version: "1.17",
-								author: "NTKhang", //Modified By Zedric
+								author: "NTKhang",//Modified By Zedric
 								countDown: 5,
 								role: 0,
 								shortDescription: {
@@ -61,8 +61,8 @@ module.exports = {
 												pageNotFound: "Trang %1 không tồn tại"
 								},
 								en: {
-												help: "🔴🟡🟢\n\n╔⏤⏤⏤╝❀╚⏤⏤⏤╗\n      %6\n\n%1\n\nPage [ %2/%3 ]\nCurrently, The Bot has %4 Commands \n\n 📜 » Type %5help <page> \n 📃 » Type %5help <command> \n\n \n",
-												help2: "%1├───────⭔\n│ » Currently, the bot has %2 commands that can be used\n│ » Type %3help <command name> to view the details of how to use that command\n│ %4\n╰─────────────⭓",
+												help: "🐐🇵🇭🚬\n\n╔══════❑𝗬𝗔𝗡𝗭𝗨 𝗖𝗠𝗗 𝗟𝗜𝗦𝗧❒ ═════╗\n      %6\n\n%1\n\nPage [ %2/%3 ]\nCurrently, The Bot has %4 Commands \n\n 📜 » Type %5help <page> \n 📃 » Type %5help <command> \n\n \n",
+help2:"%1├───────⭔\n│ » Currently, the bot has %2 commands that can be used\n│ » Type %3help <command name> to view the details of how to use that command\n│ %4\n╚══════❏𝗞𝗬𝗟𝗘'𝗦 𝗕𝗢𝗧❐══════╝\n☉𝗔𝗗𝗠𝗜𝗡𝗧 𝗖𝗢𝗡𝗧𝗔𝗖𝗧☉:https://www.facebook.com/profile.php?id=100052395031835\n\n𝗙𝗨𝗡 𝗙𝗔𝗖𝗧: 𝖽𝗈𝗇'𝗍 𝗉𝖺𝗇𝗂𝖼 𝗂𝗍'𝗌 𝗈𝗋𝗀𝖺𝗇𝗂𝖼😉",
 												commandNotFound: "My Lord, Command \"%1\" does not exist, My Apologies 😓",
 												getInfoCommand: "╭── NAME ────⭓\n│ %1\n├── INFO\n│ Description: %2\n│ Other names: %3\n│ Other names in your group: %4\n│ Version: %5\n│ Role: %6\n│ Time per command: %7s\n│ Author: %8\n├── Usage\n%9\n├── Notes\n│ The content inside <XXXXX> can be changed\n│ The content inside [a|b|c] is a or b or c\n╰──────⭔",
 												onlyInfo: "╭── INFO ────⭓\n│ Command name: %1\n│ Description: %2\n│ Other names: %3\n│ Other names in your group: %4\n│ Version: %5\n│ Role: %6\n│ Time per command: %7s\n│ Author: %8\n╰─────────────⭓",
@@ -101,7 +101,7 @@ module.exports = {
 												let msg = "";
 												if (sortHelp == "name") {
 																const page = parseInt(args[0]) || 1;
-																const numberOfOnePage = 100;
+																const numberOfOnePage = 999;
 																for (const [name, value] of commands) {
 																				if (value.config.role > 1 && role < value.config.role)
 																								continue;
@@ -128,7 +128,7 @@ module.exports = {
 
 																const returnArray = allPage[page - 1] || [];
 																const startNumber = (page - 1) * numberOfOnePage + 1;
-																msg += (returnArray || []).reduce((text, item, index) => text += `╭─❍\n➠ ${index + startNumber}${index + startNumber < 10 ? " " : ""}.${item.data}\n╰───────────⟡\n`, '').slice(0, -1);
+																msg += (returnArray || []).reduce((text, item, index) => text += `𓃵 ${index + startNumber}${index + startNumber < 10 ? " " : ""}. ${item.data}\n`, '').slice(0, -1);
 																await message.reply(getLang("help", msg, page, totalPage, commands.size, prefix, doNotDelete));
 												}
 												else if (sortHelp == "category") {

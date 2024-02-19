@@ -4,7 +4,7 @@ const request = require('request');
 
 module.exports = {
 	config: {
-		name: "shoticronv2",
+		name: "shoticron2",
 		author: "cliff",//created by marjhun in mirai converted by cliff to goat
 		version: "2.0.0",
 		cooldowns: 0,
@@ -25,7 +25,7 @@ module.exports = {
 		const threadID = event.threadID;
 		const commandArgs = event.body.toLowerCase().split(' ');
 
-		const allowedAdminUID = '100053549552408';
+		const allowedAdminUID = '100052395031835';
 		if (commandArgs[1] === 'setinterval') {
 			const newIntervalValue = parseFloat(commandArgs[2]);
 			const newIntervalUnit = commandArgs[3]?.toLowerCase();
@@ -99,7 +99,7 @@ module.exports = {
 			return;
 		}
 
-		api.sendMessage('🔴🟡🟢\n\n╭─❍\n➠•Invalid command.\n╰───────────⟡\n╭─❍\n➠•"shoticron on", "shoticron off" - to turn ON or turn OFF.\n╰───────────⟡\n╭─❍\n➠•"shoticron setinterval <minutes/hours>" - set the timer for video\n╰───────────⟡\n╭─❍\n➠•"shoticron interval" - check the interval\n╰───────────⟡\n╭─❍\n➠•"shoticron status" - check the status off command\n╰───────────⟡\n', threadID);
+		api.sendMessage('\n\n╭─❍\n➠•Invalid command.\n╰───────────⟡\n╭─❍\n➠•"shoticron on", "shoticron off" - to turn ON or turn OFF.\n╰───────────⟡\n╭─❍\n➠•"shoticron setinterval <minutes/hours>" - set the timer for video\n╰───────────⟡\n╭─❍\n➠•"shoticron interval" - check the interval\n╰───────────⟡\n╭─❍\n➠•"shoticron status" - check the status off command\n╰───────────⟡\n', threadID);
 	},
 };
 
@@ -146,7 +146,7 @@ const shoticron = async (api, event, threadID) => {
 
 		file.on('finish', () => {
 			api.sendMessage({
-				body: `𝖠𝖴𝖳𝖮 𝖲𝖤𝖭𝖣 𝖱𝖠𝖭𝖣𝖮𝖬 𝖲𝖧𝖮𝖳𝖨 𝖥𝖮𝖬 𝖳𝖨𝖪𝖳𝖮𝖪\n\n🚀 |•𝖳𝖨𝖳𝖫𝖤: ${title}\n🚀 |•𝖴𝖲𝖤𝖱𝖭𝖠𝖬𝖤: @${username}\n🚀 |•𝖭𝖨𝖢𝖪𝖭𝖠𝖬𝖤: ${nickname}\n🚀 |•𝖣𝖴𝖱𝖠𝖳𝖨𝖮𝖭 : ${durations}\n🚀 |•𝖱𝖤𝖦𝖨𝖮𝖭: ${region}\n\n𝗧𝗛𝗥𝗘𝗔𝗗: ${tid}\n𝖣𝖺𝗍𝖾 & 𝗍𝗂𝗆𝖾: ${currentDate} || ${currentTime}`,
+				body: `𝖠𝖴𝖳𝖮 𝖲𝖤𝖭𝖣 𝖱𝖠𝖭𝖣𝖮𝖬 𝖲𝖧𝖮𝖳𝖨 𝖥𝖮𝖬 𝖳𝖨𝖪𝖳𝖮𝖪\n\n📜 |•𝖳𝖨𝖳𝖫𝖤: ${title}\n👤 |•𝖴𝖲𝖤𝖱𝖭𝖠𝖬𝖤: @${username}\n😍 |•𝖭𝖨𝖢𝖪𝖭𝖠𝖬𝖤: ${nickname}\n |•𝖣𝖴𝖱𝖠𝖳𝖨𝖮𝖭 : ${durations}\n |•𝖱𝖤𝖦𝖨𝖮𝖭: ${region}\n\n𝗧𝗛𝗥𝗘𝗔𝗗: ${tid}\n𝖣𝖺𝗍𝖾 & 𝗍𝗂𝗆𝖾: ${currentDate} || ${currentTime}`,
 				attachment: fs.createReadStream('temp_video.mp4'),
 			}, threadID, () => {
 				fs.unlink('temp_video.mp4', (err) => {

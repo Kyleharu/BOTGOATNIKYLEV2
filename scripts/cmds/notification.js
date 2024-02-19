@@ -35,7 +35,7 @@ module.exports = {
 		},
 		en: {
 			missingMessage: "Please enter the message you want to send to all groups",
-			notification: "Notification from admin bot to all chat groups (do not reply to this message)",
+			notification: "‼️𝗡𝗼𝘁𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗳𝗿𝗼𝗺 𝗮𝗱𝗺𝗶𝗻 𝗯𝗼𝘁 𝘁𝗼 𝗮𝗹𝗹 𝗰𝗵𝗮𝘁 𝗴𝗿𝗼𝘂𝗽𝘀‼️",
 			sendingNotification: "Start sending notification from admin bot to %1 chat groups",
 			sentNotification: "✅ Sent notification to %1 groups successfully",
 			errorSendingNotification: "An error occurred while sending to %1 groups:\n%2"
@@ -47,7 +47,7 @@ module.exports = {
 		if (!args[0])
 			return message.reply(getLang("missingMessage"));
 		const formSend = {
-			body: `${getLang("notification")}\n────────────────\n${args.join(" ")}`,
+			body: `${getLang("notification")}\n━━━━━━━━━━━━━━━━\n${args.join(" ")}\n\n𝙁𝙪𝙣 𝙁𝙖𝙘𝙩: 𝘏𝘪𝘯𝘥𝘦 𝘮𝘢𝘵𝘢𝘵𝘢𝘯𝘨𝘨𝘢𝘭 𝘬𝘢𝘱𝘰𝘨𝘪𝘢𝘯 𝘯𝘨 𝘢𝘥𝘮𝘪𝘯 𝘬𝘰🙃`,
 			attachment: await getStreamsFromAttachment(
 				[
 					...event.attachments,

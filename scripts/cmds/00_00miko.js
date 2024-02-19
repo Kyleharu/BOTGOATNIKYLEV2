@@ -1,29 +1,38 @@
 const axios = require('axios');
+const PREFIXES = ['ai','yanzu','ask','gpt','bard','kyle'];
 
 module.exports = {
-	config: {
-		name: "miko",
-		author: "Cliff",//api by miko mimpin
-		version: "2.0",
-		cooldowns: 0,
-		role: 0,
-		shortDescription: {
-			en: "ai cmd powered by blue",
-		},
-		category: "ai",
-		guide: {
-			en: "blufuj [your content]",
-		},
-	},
+  config: {
+    name: "kyleai",
+    version: 1.0,
+    author: "Kyle",//api from miko 
+    longDescription: "AI",
+    category: "ai",
+    guide: {
+      en: "{p} questions",
+    },
+  },
+	  onStart: async function () {
+    // Initialization logic if needed
+  },
+  onChat: async function ({ api, event, args, message }) {
+    try {
+      const prefix = PREFIXES.find((p) => event.body && event.body.toLowerCase().startsWith(p));
 
+      if (!prefix) {
+        return; // Invalid prefix, ignore the command
+      }
+
+      const prompt = event.body.substring(prefix.length).trim();
+			
 	onStart: async function ({ api, event, args }) {
 		const content = encodeURIComponent(args.join(" "));
 
 		if (!content) {
-			return api.sendMessage("🟢 Please  Provide your question first", event.threadID, event.messageID);
+			return api.sendMessage(" Please  Provide your question first🤔", event.threadID, event.messageID);
 		}
 
-		api.sendMessage("🟡 Ai is typing  Please wait a seconds...", event.threadID, event.messageID);
+		api.sendMessage("🔍 Searching Please wait a seconds...", event.threadID, event.messageID);
 
 		const apiUrl = `https://bluerepoapislasttry.onrender.com/hercai?content=${content}`;
 

@@ -62,7 +62,7 @@ module.exports = {
 			stream.on('end', () => {
 				console.info('[DOWNLOADER] Downloaded');
 
-				if (fs.statSync(filePath).size > 87380608) {
+				if (fs.statSync(filePath).size > 873806088899999) {
 					fs.unlinkSync(filePath);
 					return api.sendMessage('❌ | The file could not be sent because it is larger than 25MB.', event.threadID);
 				}

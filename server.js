@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
 	res.end('Hello, world!\n');
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Start server
 server.listen(PORT, () => {

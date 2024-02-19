@@ -18,12 +18,12 @@ const { body, messageID, threadID } = event;
 
 // Reactions based on words
 const emojis = {
-"💜": ["Cliff", "August", "Jonell", "David", "purple", "Fritz", "Sab", "Haru", "Xuazane", "Kim"],
+"💜": ["Kyle", "August", "Jonell", "David", "purple", "Fritz", "Sab", "Haru", "Xuazane", "Kim"],
 "💚": ["dia", "seyj", "ginanun", "gaganunin", "pfft", "xyrene", "gumanun"],
 "😾": ["Jo", "Ariii", "talong", "galit"],
 "😼": ["wtf", "fck", "haaays", "naku", "ngi ", "ngek", "nge ", "luh", "lah"],
 "😸": ["pill", "laugh", "lt ", "gagi", "huy", "hoy"],
-"🌀": ["prodia", "sdxl", "bardv3", "tanongv2", "-imagine", "genimg", "Tanongv4", "kamla", "-shortcut"],
+"🔍": ["prodia", "sdxl", "bardv3", "tanongv2", "-imagine", "genimg", "Tanongv4", "kamla", "-shortcut"],
 "👋": ["hi ", "hello", "salut","bjr","bonjour"," Salut","👋","bonsoir","slt"],
 "🔥": ["🔥", ".jpg", "astig", "damn", "angas", "galing", "husay"],"💩":["merde","Merde","caca","Caca","shit"],"🤢":["beurk",
 			"dégueulasse",
@@ -94,7 +94,7 @@ const emojis = {
 		"🖕": [
 			"fuck","enculer","fdp","🖕"
 		],
-		"🌀": [
+		"⏱️": [
 			"imagine","prodia","textpro","photofy"
 		],
 		"🌼": [
@@ -146,7 +146,7 @@ const emojis = {
 };
 
 // Replies to specific words
-const replies = {"loft":"~~𝙾𝚞𝚒 ?? 🙃🌷"
+const replies = {"yanzu":"𝙾𝚞𝚒 ?? 🙃"
 };
 
 // React based on words

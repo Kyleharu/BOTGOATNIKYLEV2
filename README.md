@@ -1,6 +1,6 @@
 <img src="https://i.ibb.co/r5W1w9C/65a2deab8394d754214210.gif" alt="banner">
 <h1 align="center">
-  <img src="./dashboard/images/logo-non-bg.png" width="25px"> GoatBot-V2 - Bot Chat Messenger
+  <img src="./dashboard/images/logo-non-bg.png" width="25px">YANZU AI GoatBot-V2 - Bot Chat Messenger
 </h1>
 
 <p align="center">

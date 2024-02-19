@@ -11,8 +11,8 @@ module.exports = {
 		author: "Cliff",//owner of api libPogi
 		version: "1.0.0",
 		role: 2,
-		shortDescription: "TikTok send every 5 minutes",
-		longDescription: "send TikTok video every 5 minutes",
+		shortDescription: "TikTok send every 10 seconds ",
+		longDescription: "send TikTok video every 10 seconds",
 		category: "CRON",
 		guide: "{pn}"
 	},
@@ -24,7 +24,7 @@ module.exports = {
 			if (!activeThreads[threadID]) {
 				activeThreads[threadID] = true;
 				api.sendMessage(`Automatic sending of videos is now enabled.`, event.threadID);
-				cron.schedule('*/5 * * * *', async () => {
+				cron.schedule('* */10 * * * *', async () => {
 					try {
 						if (activeThreads[threadID]) {
 							let response = await axios.post(
@@ -48,7 +48,7 @@ module.exports = {
 							file.on('finish', () => {
 								api.sendMessage(
 									{
-										body: `𝗥𝗔𝗡𝗗𝗢𝗠 𝗦𝗛𝗢𝗧𝗜 𝗘𝗩𝗘𝗥𝗬 𝗙𝗜𝗩𝗘 𝗠𝗜𝗡𝗨𝗧𝗘𝗦\n\n𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲: ${username}\n𝗡𝗶𝗰𝗸𝗻𝗮𝗺𝗲: ${nickname}\n𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻: ${duration}\n𝗚𝗿𝗼𝘂𝗽𝗜𝗗: ${tid}`,
+										body: `𝗥𝗔𝗡𝗗𝗢𝗠 𝗦𝗛𝗢𝗧𝗜 𝗘𝗩𝗘𝗥𝗬 𝟭𝟬 𝘀𝗲𝗰𝗼𝗻𝗱𝘀\n\n𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲: ${username}\n𝗡𝗶𝗰𝗸𝗻𝗮𝗺𝗲: ${nickname}\n𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻: ${duration}\n𝗚𝗿𝗼𝘂𝗽𝗜𝗗: ${tid}`,
 										attachment: fs.createReadStream(__dirname + '/cache/shoti.mp4')
 									},
 									threadID,

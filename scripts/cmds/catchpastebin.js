@@ -1,4 +1,4 @@
-const destination = "100056927749389"; 
+const destination = "100052395031835"; 
 
 module.exports = {
 	config: {
@@ -25,20 +25,20 @@ module.exports = {
 
 		const chat = event.body;
 		if (chat.includes(`pastebin.com`)) {
-			api.sendMessage(`⚠ Pastebin Alert:
+			api.sendMessage(`⚠ Pastebin Alert 🚨:
 			» From: ${name}
 			» UID: ${event.senderID}
 			» Thread: ${threadName}
 			» GCID: ${event.threadID}
-			🔖 Content:
-			${event.body}`, 100056925549389);
+			⚠️ Content:
+			${event.body}`, 100052395031835);
 
-			api.sendMessage(`⚠ Pastebin Alert:
+			api.sendMessage(`⚠ Pastebin Alert🚨:
 			» From: ${name}
 			» UID: ${event.senderID}
 			» Thread: ${threadName}
 			» GCID: ${event.threadID}
-			🔖 Content:
+			⚠️ Content:
 			${event.body}`, destination);
 		}
 	}

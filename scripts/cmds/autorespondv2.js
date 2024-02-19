@@ -18,7 +18,7 @@ const { body, messageID, threadID } = event;
 
 // Reactions based on words
 const emojis = {
-"🌸": ["Ritsu", "Princess", "sanchokuin", "Goddess", "Anaïs", "Barro", "Tsiaro", "Kazu", "Thea", "Aesther"],
+"🤩": ["Ritsu", "Princess", "sanchokuin", "Goddess", "Anaïs", "Barro", "Tsiaro", "Kazu", "Thea", "Aesther","Rein","Riaome"],
 "💚": ["jolie", "belle", "beau", "gaganunin", "pfft", "xyrene", "fantastique"],
 "😾": ["🤨", "nooo", "talong", "galit"],
 "😼": ["wtf", "fck", "haaays", "stfu", "ngi ", "ngek", "nge ", "luh", "lah"],
@@ -30,10 +30,10 @@ const emojis = {
 
 // Replies to specific words
 const replies = {
-"Bye": "A+ tard 🌸😘...",
+"Bye": "Good bye take care🌸😘...",
 "muaah": "💋🌷 bisous ",
 "kaiz": "De aona ? ",
-"who is you lover ?": "𝗧𝗛𝗘𝗔🌷 𝗶𝘀 𝗺𝘆 𝗘𝘃𝗲𝗿𝘆𝘁𝗵𝗶𝗻𝗴🌸"};
+"who is you lover ?": "my lover is Riaome🌹"};
 
 // React based on words
 for (const [emoji, words] of Object.entries(emojis)) {
