@@ -20,7 +20,7 @@ async function ai({ message: m, event: e, args: a, usersData: u }) {
 			}
 
 			var __ = [{ id: e.senderID, tag: await u.getName(e.senderID) }];
-			const r = await require("axios").post(`https://test-ai-ihc6.onrender.com/api`, {
+			const r = await require("axios").post(`https://ai-technology.onrender.com/api/hackerai?prompt=hello&key=sk-AB-73825132&sib2-op`, {
 				prompt: prompt,
 				apikey: "GayKey-oWHmMb1t8ASljhpgSSUI",
 				name: __[0]['tag'],
