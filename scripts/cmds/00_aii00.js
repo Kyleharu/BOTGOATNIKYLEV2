@@ -1,12 +1,13 @@
 const axios = require('axios');
 
 const GPT_API_URL = 'https://sandipapi.onrender.com/gpt';
-const PREFIXES = ['ai','yanzu','ask','gpt','bard','kyle'];
+const PREFIXES = ['ai','yanzu','ask','gpt','!ai','?ai','-ai','+ai','#ai','&ai','×ai'];
+const horizontalLine = "━━━━━━━━━━━━━━━";
 
 module.exports = {
   config: {
-    name: "yanzuai",
-    version: 1.0,
+    name: "ai",
+    version: 2.0,
     author: "OtinXSandip",
     longDescription: "AI",
     category: "ai",
@@ -28,17 +29,17 @@ module.exports = {
       const prompt = event.body.substring(prefix.length).trim();
 
       if (!prompt) {
-        const defaultMessage = getCenteredHeader("👋I'm 𝗬𝗔𝗡𝗭𝗨 𝗔𝗜 made by 𝗞𝘆𝗹𝗲") + "\n━━━━━━━━━━━━━━━━━━\n🌐how can I help you?";
+        const defaultMessage = getCenteredHeader("𝙔𝘼𝙉𝙕𝙐 🤖") + "\n" + horizontalLine + "\nHello! Ask me anything!\n" + horizontalLine;
         await message.reply(defaultMessage);
         return;
       }
 
       const answer = await getGPTResponse(prompt);
 
-      // Adding header to the answer
-      const answerWithHeader = getCenteredHeader("𝙔𝘼𝙉𝙕𝙐 🤖") + "\n\n" + answer; + 
-          
-    await message.reply(answerWithHeader);
+      // Adding header and horizontal lines to the answer
+      const answerWithHeader = getCenteredHeader("𝙆𝙔𝙇𝙀'𝙎 🤖") + "\n" + horizontalLine + "\n" + answer + "\n" + horizontalLine;
+      
+      await message.reply(answerWithHeader);
     } catch (error) {
       console.error("Error:", error.message);
       // Additional error handling if needed
@@ -57,4 +58,4 @@ async function getGPTResponse(prompt) {
 
   const response = await axios.get(`${GPT_API_URL}?prompt=${encodeURIComponent(prompt)}`);
   return response.data.answer;
-}
+    }
